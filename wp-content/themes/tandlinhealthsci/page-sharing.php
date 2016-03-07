@@ -96,7 +96,7 @@ $innovate_website			= get_field('innovate_website');
   			
  			<p>Do you have an innovation in teaching and learning you would like to share with your colleagues? Please complete the form below with details about your innovation and how it has enhanced your students' learning, and we will post it for other staff to learn from. Thanks!</p>
  									
- 					<?php echo do_shortcode( '[contact-form-7 id="66" title="Sharing Contact Form"]' ); ?>
+ 					<?php echo FrmFormsController::get_form_shortcode( array( 'id' => 4, 'title' => false, 'description' => false ) ); ?>
  			
  	</div><!-- /.container -->
  </section><!-- /.main-content -->

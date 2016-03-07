@@ -74,7 +74,7 @@ get_header();
 	<?php echo($software_desc); ?>
 	<?php endif; ?>
 			
-	<?php $loop = new WP_Query( array( 'post_type' => 'software', 'orderby' => 'post_id', 'order' => 'DESC', 'posts_per_page' => 3 ) ); ?>
+	<?php $loop = new WP_Query( array( 'post_type' => 'digital_resources', 'category_name' => 'software', 'orderby' => 'post_id', 'order' => 'DESC', 'posts_per_page' => 3 ) ); ?>
 		
 		<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 		
@@ -106,7 +106,7 @@ get_header();
 		</div><!-- row -->	
 			<hr />		
 		
-		<?php endwhile; ?>
+		<?php endwhile; wp_reset_query(); ?>
 				
 	</div><!--software-->
 
@@ -122,7 +122,7 @@ get_header();
 			<?php echo($mobile_desc); ?>
 			<?php endif; ?>	
 			
-			<?php $loop = new WP_Query( array( 'post_type' => 'mobile', 'orderby' => 'post_id', 'order' => 'DESC', 'posts_per_page' => 3 ) ); ?>
+			<?php $loop = new WP_Query( array( 'post_type' => 'digital_resources', 'category_name' => 'mobile', 'orderby' => 'post_id', 'order' => 'DESC', 'posts_per_page' => 3 ) ); ?>
 				
 			<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 								
@@ -154,7 +154,7 @@ get_header();
 				</div><!-- row -->	
 					<hr />		
 				
-				<?php endwhile; ?>					
+				<?php endwhile; wp_reset_query(); ?>					
 			</div><!--mobile-->				
 	
 	<!-- WEB APPS		
@@ -168,7 +168,7 @@ get_header();
 				<?php echo($web_desc); ?>
 				<?php endif; ?>
 				
-				<?php $loop = new WP_Query( array( 'post_type' => 'web', 'orderby' => 'post_id', 'order' => 'DESC', 'posts_per_page' => 3 ) ); ?>
+				<?php $loop = new WP_Query( array( 'post_type' => 'digital_resources', 'category_name' => 'websites', 'orderby' => 'post_id', 'order' => 'DESC', 'posts_per_page' => 3 ) ); ?>
 					
 				<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 									
@@ -200,7 +200,7 @@ get_header();
 					</div><!-- row -->	
 						<hr />		
 					
-					<?php endwhile; ?>						
+					<?php endwhile; wp_reset_query(); ?>						
 			</div><!--web-->
 	
 	<!-- HARDWARE		
@@ -214,7 +214,7 @@ get_header();
 				<?php echo($hardware_desc); ?>
 				<?php endif; ?>
 				
-				<?php $loop = new WP_Query( array( 'post_type' => 'hardware', 'orderby' => 'post_id', 'order' => 'DESC', 'posts_per_page' => 3 ) ); ?>
+				<?php $loop = new WP_Query( array( 'post_type' => 'digital_resources', 'category_name' => 'hardware', 'orderby' => 'post_id', 'order' => 'DESC', 'posts_per_page' => 3 ) ); ?>
 					
 				<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 				
@@ -245,7 +245,7 @@ get_header();
 					</div><!-- row -->
 						<hr />			
 					
-					<?php endwhile; ?> 									
+					<?php endwhile; wp_reset_query(); ?> 									
  				
  				</div><!--hardware-->
  				
