@@ -492,7 +492,7 @@ blockquote:before {
 
 #hero {
 	background: url('/wp-content/themes/tandlinhealthsci/assets/images/DarkBloodCellsBackground.jpg') 50% 0 fixed;
-	min-height: 500px;
+	min-height: 350px;
 	height: auto;
 	padding: 40px 0;
 	color: white;
